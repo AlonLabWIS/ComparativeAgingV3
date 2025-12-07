@@ -103,8 +103,16 @@ Place these files in the `Figures/datasets/` directory.
 
 **Additional notebooks:**
 - `QSS_explanation_figure.ipynb`: Explanation figure for quasi-steady-state
-
 - `params_vs_LS.ipynb`: Parameter vs. lifespan analysis
+
+**Results folder (`results/`):**
+The `results/` folder contains three types of parameter estimation tables with full parameter estimates for all datasets:
+
+- **`summery_max_likelihood.csv`**: Contains the single sample from each MCMC run with the highest likelihood. This represents the best-fit parameter set based on maximum likelihood.
+
+- **`summery_mode_overall.csv`**: After binning the MCMC samples (with averaging of likelihoods that fall in the same bin), this contains the sample with the highest likelihood within the mode bin (the bin with highest posterior probability). Either `summery_max_likelihood.csv` or `summery_mode_overall.csv` should be used for simulations, as they contain complete parameter sets.
+
+- **`summery_mode.csv`**: Contains the modes (highest probabilities) for marginalized posterior distributions over different parameters and parameter groups, including 95% confidence intervals. **Important**: Since these are marginalized distributions, the values represent modes of individual parameters rather than a coherent parameter set. Therefore, this file should **not** be used for simulations, but is useful for understanding the distribution of individual parameters and their uncertainties. These are the values in tables 2,3 in the paper.
 
 ### Different Noises
 
