@@ -93,7 +93,7 @@ Example:
     script_dir = Path(__file__).parent.absolute()
     
     # Primary download location
-    output_dir = script_dir / 'random_posterior_sampling_analysis' / 'posteriors'
+    output_dir = script_dir / 'SI_11_and_SHAP_analysis' / 'posteriors'
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # Secondary location for copying
